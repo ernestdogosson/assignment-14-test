@@ -1,0 +1,23 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+// Font Size
+$font-sizes: (
+	// Big hero text
+	'display-lg': 48px,
+
+	// Hero text
+	'display': 36px,
+	// Titles
+	'title': 24px,
+	// Subtitles
+	'subtitle': 22px,
+	// Lead paragraphs
+	'lead': 20px,
+	// Body text
+	'body': 16px,
+	// Captions, small text,,,
+	'caption': 14px
+);

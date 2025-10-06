@@ -8,7 +8,53 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
 		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="/css/main.css" />
 	</head>
-	<body></body>
+	<body>
+		<div class="page">
+			<header class="header">
+				<!-- Search Component -->
+				<div class="search">
+					<input
+						type="text"
+						class="search__input"
+						placeholder="Search your travel destination"
+					/>
+					<button class="search__btn">Search</button>
+				</div>
+
+				<!-- Navigation Component -->
+				<div class="nav-bg">
+					<nav class="nav">
+						<div class="nav__data">
+							<p class="nav__logo">bhromaon</p>
+							<div class="nav__toggle" id="nav-toggle">
+								<i class="nav__icon nav__icon--menu ri-menu-line"></i>
+								<i class="nav__icon nav__icon--close ri-close-line"></i>
+							</div>
+						</div>
+
+						<ul class="nav__menu" id="nav-menu">
+							<li class="nav__item">
+								<a href="#who-we-are" class="nav__link">Who We Are</a>
+							</li>
+							<li class="nav__item">
+								<a href="#what-we-do" class="nav__link">What We Do</a>
+							</li>
+							<li class="nav__item">
+								<a href="#travel" class="nav__link">Travel With Us</a>
+							</li>
+							<li class="nav__item">
+								<a href="#contact" class="nav__link">Contact Us</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</div>
+	</body>
 </html>
