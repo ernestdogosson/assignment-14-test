@@ -8,6 +8,23 @@ $color-neutral: #fff;
 // container width
 $container-desktop: 1173px;
 
-// font family
 $font-main: 'Josefin Sans', sans-serif;
 $font-heading: 'Aleo', serif;
+
+$font-sizes: (
+	'display-lg': clamp(28px, 5vw, 48px),
+	'display': clamp(24px, 4vw, 36px),
+	'title': clamp(18px, 2.5vw, 24px),
+	'subtitle': clamp(16px, 2.2vw, 22px),
+	'lead': clamp(16px, 2vw, 20px),
+	'body': clamp(14px, 1.5vw, 16px),
+	'caption': clamp(12px, 1.2vw, 14px),
+);
+
+$spacing: (
+	'xs': clamp(0.5rem, 1vw, 1.25rem),
+	'sm': clamp(1.5rem, 2.5vw, 2.8125rem),
+	'md': clamp(2rem, 3.5vw, 3.125rem),
+	'lg': clamp(3rem, 5vw, 7.3125rem),
+	'xl': clamp(4rem, 6vw, 10rem),
+);

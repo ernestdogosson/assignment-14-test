@@ -1,68 +1,6 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
-@use '../base/topology' as *;
-
-// .page {
-// 	@include section-bg('page1.png');
-// 	position: relative;
-// }
-
-// .header {
-// 	max-width: $container-desktop;
-// 	height: 100vh;
-// 	z-index: 10;
-// 	margin: 0 auto;
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
-//
-
-//
-// }
-
-// .nav-bg {
-// 	position: absolute;
-// 	bottom: 0;
-// 	left: 0;
-// 	right: 0;
-//
-// }
-
-// .nav {
-// 	display: flex;
-// 	justify-content: space-between;
-// 	align-items: center;
-// 	max-width: $container-desktop;
-// 	margin: 0 auto;
-// 	color: $color-neutral;
-
-// 	&__logo {
-// 		font-family: inherit;
-// 		text-transform: uppercase;
-// 		font-size: 24px; //fix later
-// 		line-height: 26px;
-// 		font-weight: bold;
-// 		letter-spacing: 2.4px;
-// 	}
-
-// 	&__menu {
-// 		display: flex;
-// 		width: 523px;
-// 		justify-content: space-between;
-// 		font-family: $font-heading;
-// 		font-size: 14px;
-// 	}
-
-// 	&__toggle {
-// 		display: none;
-// 	}
-
-// fix hover, active and focus
-
 .hero {
 	@include section-bg('page1.png');
 	position: relative;
@@ -75,19 +13,19 @@
 		align-items: center;
 		text-align: center;
 		max-width: $container-desktop;
-		height: 100vh;
+		height: calc(100vh - 83px);
 		margin: 0 auto;
 	}
 
 	&__title {
-		font-size: 48px;
+		font-size: fonts('display-lg');
 		text-transform: uppercase;
 		margin-bottom: 0;
 	}
 
 	&__tagline {
-		margin-bottom: 40px;
-		font-size: 22px;
+		margin-bottom: space('sm');
+		font-size: fonts('subtitle');
 		text-transform: capitalize;
 		letter-spacing: 6.86px;
 	}
@@ -98,28 +36,36 @@
 		display: flex;
 		background-color: $color-neutral;
 		border: solid 1px $color-neutral;
-		margin-bottom: 50px;
+		margin-bottom: clamp(2rem, 3.5vw, 3.125rem);
 
 		&__input {
 			height: 100%;
 			flex: 1;
 			border: none;
+			padding: space('xs');
 		}
 
 		&__input::placeholder {
 			font-family: $font-main;
-			font-size: 14px; //fix
+			font-size: fonts('caption');
 			text-align: center;
 			text-transform: capitalize;
 			letter-spacing: 2.8px;
 			left: 26px;
 		}
 
+		&__input:focus {
+			color: $color-footer-bg;
+			border: none;
+			font-size: fonts('lead');
+			outline: none;
+		}
+
 		&__btn {
 			@include button;
 			min-width: 153px;
 			text-transform: uppercase;
-			font-size: 14px;
+			font-size: fonts('caption');
 			letter-spacing: 1.4px;
 			font-family: $font-heading;
 
@@ -131,15 +77,18 @@
 	}
 
 	&__scroll {
-		padding-top: 50px;
+		padding-top: space('md');
 		background-color: transparent;
 		border: none;
-		display: flex;
-		flex-direction: column;
 		text-transform: capitalize;
 		color: $color-neutral;
-		font-size: 14px;
+		font-size: fonts('caption');
 		letter-spacing: 2.8px;
+	}
+
+	&__scroll-link {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
@@ -158,7 +107,7 @@
 	&__logo {
 		font-family: inherit;
 		text-transform: uppercase;
-		font-size: 24px; //fix later
+		font-size: fonts('title');
 		line-height: 26px;
 		font-weight: bold;
 		letter-spacing: 2.4px;
@@ -169,7 +118,26 @@
 		width: 523px;
 		justify-content: space-between;
 		font-family: $font-heading;
-		font-size: 14px;
+		font-size: fonts('caption');
+	}
+
+	&__link {
+		color: $color-neutral;
+		text-decoration: none;
+		transition: color 0.3s ease, border-bottom 0.3s ease;
+		padding-bottom: 2px;
+		border-bottom: 2px solid transparent;
+
+		&:hover {
+			color: $color-text-main;
+			border-bottom: 2px solid $color-text-main;
+		}
+
+		&:active,
+		&:focus {
+			color: $color-neutral;
+			border-bottom: 2px solid $color-neutral;
+		}
 	}
 
 	&__toggle {

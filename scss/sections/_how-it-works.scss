@@ -1,13 +1,11 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
-@use '../base/topology' as *;
 
 .how-it-works {
 	min-height: 340px;
 	display: flex;
 	align-items: end;
 	justify-content: center;
-
 	background-color: $color-footer-bg;
 	position: relative;
 
@@ -74,7 +72,7 @@
 		text-align: center;
 		color: $color-text-main;
 		white-space: nowrap;
-		font-size: 36px;
+		font-size: fonts('display');
 		font-family: $font-heading;
 		color: $color-neutral;
 		font-weight: 500;

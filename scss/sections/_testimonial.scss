@@ -1,8 +1,6 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
-@use '../base/topology' as *;
-
 .testimonial {
 	@include section-bg('page6.png');
 
@@ -17,7 +15,7 @@
 	}
 
 	&__title {
-		font-size: 36px;
+		font-size: fonts('display');
 		font-family: $font-heading;
 		color: $color-neutral;
 		text-align: center;
@@ -34,21 +32,21 @@
 	&__item {
 		flex: 2;
 		background-color: $color-footer-bg;
-		padding: 20px;
+		padding: clamp(0.5rem, 1vw, 1.25rem);
 	}
 
 	&__info-title {
-		font-size: 20px;
+		font-size: fonts('lead');
 		text-transform: capitalize;
 	}
 
 	&__description {
+		font-size: fonts('body');
 		line-height: 1.6;
 	}
 
-	// fix accent
 	&__accent {
-		font-size: 2rem;
+		font-size: fonts('display');
 		color: $color-main;
 	}
 }

@@ -1,8 +1,6 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
-@use '../base/topology' as *;
-
 .footer {
 	background-color: $color-footer-bg;
 	display: flex;
@@ -17,6 +15,21 @@
 		margin: 0;
 	}
 
+	&__logo {
+		font-size: fonts('title');
+		line-height: 1.6;
+		letter-spacing: 3.36px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	&__tagline {
+		font-size: fonts('body');
+		letter-spacing: 1.6px;
+		line-height: 1.6;
+		padding-bottom: space('xs');
+	}
+
 	&__menu {
 		display: flex;
 		justify-content: space-between;
@@ -25,17 +38,28 @@
 		max-width: 166px;
 	}
 
-	&__logo {
-		font-size: 24px;
-		line-height: 1.6;
-		letter-spacing: 3.36px;
-		text-transform: uppercase;
-		font-weight: 700;
-	}
+	&__link {
+		color: $color-text-main;
+		text-decoration: none;
+		transition: color 0.3s ease, transform 0.3s ease;
+		display: inline-block;
 
-	&__tagline {
-		letter-spacing: 1.6px;
-		line-height: 1.6;
-		padding-bottom: 20px;
+		&:hover {
+			color: $color-main;
+			transform: translateY(-2px);
+		}
+
+		&:active {
+			transform: translateY(0);
+		}
+
+		&--social {
+			font-size: fonts('lead');
+
+			&:hover {
+				color: $color-main;
+				transform: scale(1.2);
+			}
+		}
 	}
 }
