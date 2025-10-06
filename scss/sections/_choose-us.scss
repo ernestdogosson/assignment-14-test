@@ -2,3 +2,73 @@
 @use '../abstract/mixins' as *;
 
 @use '../base/topology' as *;
+
+.why-choose {
+	@include section-bg('page2.png');
+	height: 100vh;
+
+	&__content {
+		max-width: $container-desktop;
+		margin: 0 auto;
+
+		height: 100vh;
+		display: flex;
+		padding: 117px 0;
+	}
+
+	&__info,
+	&__media {
+		flex: 1;
+		width: 100%;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__title {
+		font-size: 36px;
+		color: $color-neutral;
+		font-family: $font-heading;
+	}
+
+	&__description {
+		letter-spacing: 1.6px;
+		line-height: 1.625;
+		margin-bottom: 45px;
+	}
+
+	&__btn {
+		@include button;
+		max-width: 228px;
+		height: 63px;
+		text-transform: uppercase;
+		letter-spacing: 1.2px;
+		font-family: $font-heading;
+	}
+
+	&__media {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 50px;
+		gap: 10px;
+	}
+
+	&__img {
+		display: block;
+		max-width: 350px;
+		max-height: 220px;
+	}
+
+	.one {
+		align-self: flex-start;
+	}
+
+	.two {
+		align-self: flex-end;
+	}
+}

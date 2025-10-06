@@ -64,11 +64,7 @@
 // fix hover, active and focus
 
 .hero {
-	@include section-bg('hero.jpg');
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	@include section-bg('page1.png');
 	position: relative;
 	background-color: #333;
 
@@ -80,6 +76,9 @@
 		align-items: center;
 		text-align: center;
 		max-width: $container-desktop;
+		border: solid white;
+		height: 100vh;
+		margin: 0 auto;
 	}
 
 	.search {
