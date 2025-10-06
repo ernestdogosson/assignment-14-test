@@ -5,12 +5,11 @@
 
 .why-choose {
 	@include section-bg('page2.png');
-	height: 100vh;
+	max-height: 685px;
 
 	&__content {
 		max-width: $container-desktop;
 		margin: 0 auto;
-
 		height: 100vh;
 		display: flex;
 		padding: 117px 0;

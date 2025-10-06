@@ -1,0 +1,72 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+@use '../base/topology' as *;
+
+.hot-spot {
+	@include section-bg('page4.png');
+}
+
+.hot-spot,
+.hot-spot-two {
+	max-height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__content {
+		height: 100vh;
+		width: $container-desktop;
+		display: flex;
+		margin: 0 auto;
+	}
+
+	&__item {
+		height: 100%;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__card {
+		background-color: $color-footer-bg;
+		opacity: 0.9;
+		max-width: 543px;
+		max-height: 374px;
+		padding: 20px;
+	}
+
+	&__location,
+	&__title {
+		font-size: 20px;
+		color: $color-neutral;
+		line-height: 1.6;
+		text-transform: capitalize;
+	}
+
+	&__title {
+		text-transform: uppercase;
+	}
+
+	&__description {
+		line-height: 1.6;
+	}
+
+	&__btn {
+		@include button;
+		text-transform: uppercase;
+		font-family: $font-heading;
+		font-size: 16px;
+		padding: 1.5rem 4rem;
+		margin: 2rem 0;
+	}
+}
+
+.hot-spot-two {
+	@include section-bg('page5.png');
+
+	&__item {
+		justify-content: flex-start;
+	}
+}
