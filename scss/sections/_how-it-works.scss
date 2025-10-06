@@ -1,18 +1,83 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
-
 @use '../base/topology' as *;
 
 .how-it-works {
-	background-color: $color-page-bg;
 	min-height: 340px;
 	display: flex;
-	align-items: center;
+	align-items: end;
 	justify-content: center;
+
+	background-color: $color-footer-bg;
 	position: relative;
+
+	&__content {
+		position: relative;
+		width: 100%;
+		width: 777px;
+		height: 100%;
+	}
+
+	&__arch {
+		width: 777px;
+		margin: 0 auto;
+		height: 100%;
+		object-fit: contain;
+		position: relative;
+		top: -180px;
+	}
 
 	&__icons {
 		position: absolute;
-		display: block;
+		width: 777px;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	&__icon-wrapper {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		background-color: $color-footer-bg;
+		padding: 0.5rem 0;
+		top: -100%;
+		pointer-events: all;
+
+		&--1 {
+			left: -100px;
+			bottom: 0;
+		}
+
+		&--2 {
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+		}
+
+		&--3 {
+			right: -100px;
+			bottom: 0;
+		}
+	}
+
+	&__icon {
+		width: 40px;
+		height: 40px;
+	}
+
+	&__label {
+		text-align: center;
+		color: $color-text-main;
+		white-space: nowrap;
+		font-size: 36px;
+		font-family: $font-heading;
+		color: $color-neutral;
+		font-weight: 500;
+		margin: 1.5rem 0 2rem;
 	}
 }
