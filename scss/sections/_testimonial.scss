@@ -1,0 +1,54 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+@use '../base/topology' as *;
+
+.testimonial {
+	@include section-bg('page6.png');
+
+	&__content {
+		height: 100vh;
+		max-width: 1113px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: 36px;
+		font-family: $font-heading;
+		color: $color-neutral;
+		text-align: center;
+	}
+
+	&__info {
+		display: flex;
+	}
+
+	&__media {
+		flex: 1;
+	}
+
+	&__item {
+		flex: 2;
+		background-color: $color-footer-bg;
+		padding: 20px;
+	}
+
+	&__info-title {
+		font-size: 20px;
+		text-transform: capitalize;
+	}
+
+	&__description {
+		line-height: 1.6;
+	}
+
+	// fix accent
+	&__accent {
+		font-size: 2rem;
+		color: $color-main;
+	}
+}
