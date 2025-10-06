@@ -3,66 +3,126 @@
 
 @use '../base/topology' as *;
 
-.page {
-	@include section-bg('page1.png');
-	position: relative;
-}
+// .page {
+// 	@include section-bg('page1.png');
+// 	position: relative;
+// }
 
-.header {
-	max-width: $container-desktop;
-	height: 100vh;
-	z-index: 10;
-	margin: 0 auto;
+// .header {
+// 	max-width: $container-desktop;
+// 	height: 100vh;
+// 	z-index: 10;
+// 	margin: 0 auto;
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	align-items: center;
+// }
+
+//
+
+//
+// }
+
+// .nav-bg {
+// 	position: absolute;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+//
+// }
+
+// .nav {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	max-width: $container-desktop;
+// 	margin: 0 auto;
+// 	color: $color-neutral;
+
+// 	&__logo {
+// 		font-family: inherit;
+// 		text-transform: uppercase;
+// 		font-size: 24px; //fix later
+// 		line-height: 26px;
+// 		font-weight: bold;
+// 		letter-spacing: 2.4px;
+// 	}
+
+// 	&__menu {
+// 		display: flex;
+// 		width: 523px;
+// 		justify-content: space-between;
+// 		font-family: $font-heading;
+// 		font-size: 14px;
+// 	}
+
+// 	&__toggle {
+// 		display: none;
+// 	}
+
+// fix hover, active and focus
+
+.hero {
+	@include section-bg('hero.jpg');
+	min-height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-}
+	position: relative;
+	background-color: #333;
 
-.search {
-	height: 63px;
-	width: 60%;
-	display: flex;
-	background-color: $color-neutral;
-	border: solid 1px $color-neutral;
-
-	&__input {
-		height: 100%;
+	&__content {
 		flex: 1;
-		border: none;
-	}
-
-	&__input::placeholder {
-		font-family: $font-main;
-		font-size: 14px; //fix
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		text-align: center;
-		text-transform: capitalize;
-		letter-spacing: 2.8px;
-		left: 26px;
+		max-width: $container-desktop;
 	}
 
-	&__btn {
-		@include button;
-		min-width: 153px;
-		text-transform: uppercase;
-	}
-}
+	.search {
+		height: 63px;
+		width: 60%;
+		display: flex;
+		background-color: $color-neutral;
+		border: solid 1px $color-neutral;
 
-.nav-bg {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: $color-main;
-	height: 83px;
+		&__input {
+			height: 100%;
+			flex: 1;
+			border: none;
+		}
+
+		&__input::placeholder {
+			font-family: $font-main;
+			font-size: 14px; //fix
+			text-align: center;
+			text-transform: capitalize;
+			letter-spacing: 2.8px;
+			left: 26px;
+		}
+
+		&__btn {
+			@include button;
+			min-width: 153px;
+			text-transform: uppercase;
+		}
+	}
 }
 
 .nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	max-width: $container-desktop;
-	margin: 0 auto;
-	color: $color-neutral;
+	background-color: $color-main;
+	height: 83px;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: $container-desktop;
+		margin: 0 auto;
+	}
 
 	&__logo {
 		font-family: inherit;

@@ -16,26 +16,35 @@
 	</head>
 	<body>
 		<div class="page">
-			<header class="header">
-				<!-- Search Component -->
-				<div class="search">
-					<input
-						type="text"
-						class="search__input"
-						placeholder="Search your travel destination"
-					/>
-					<button class="search__btn">Search</button>
+			<!-- Hero Section (First page - 100vh with nav at bottom) -->
+			<section class="hero">
+				<div class="hero__content">
+					<h1 class="hero__title">bhromaon</h1>
+					<p class="hero__tagline">safe travel everywhere</p>
+
+					<div class="search hero__search">
+						<input
+							type="text"
+							class="search__input"
+							placeholder="Search your travel destination"
+						/>
+						<button class="search__btn">Search</button>
+					</div>
+
+					<button class="hero__scroll">
+						scroll down
+						<i class="ri-arrow-down-line"></i>
+					</button>
 				</div>
 
-				<!-- Navigation Component -->
-				<div class="nav-bg">
-					<nav class="nav">
-						<div class="nav__data">
-							<p class="nav__logo">bhromaon</p>
-							<div class="nav__toggle" id="nav-toggle">
-								<i class="nav__icon nav__icon--menu ri-menu-line"></i>
-								<i class="nav__icon nav__icon--close ri-close-line"></i>
-							</div>
+				<!-- Navigation at bottom of hero -->
+				<nav class="nav">
+					<div class="nav__content">
+						<p class="nav__logo">bhromaon</p>
+
+						<div class="nav__toggle" id="nav-toggle">
+							<i class="nav__icon nav__icon--menu ri-menu-line"></i>
+							<i class="nav__icon nav__icon--close ri-close-line"></i>
 						</div>
 
 						<ul class="nav__menu" id="nav-menu">
@@ -52,9 +61,43 @@
 								<a href="#contact" class="nav__link">Contact Us</a>
 							</li>
 						</ul>
-					</nav>
-				</div>
-			</header>
+					</div>
+				</nav>
+			</section>
+
+			<!-- Main Content (Second page starts here) -->
+			<main class="main">
+				<section class="why-choose" id="who-we-are">
+					<div class="why-choose__info">
+						<h2 class="why-choose__title">Why Choose Us</h2>
+						<div class="why-choose__description">
+							<p>
+								Tion and dislike men who are so beguiled and demoralized by
+								desire by the charms of pleasure of the moment, so blinded by
+								desire, that they cannot foresee
+							</p>
+							<p>
+								Dislike men who are so beguiled and demoralized by the charms of
+								pleasure of the moment, so blinded by desire, that.
+							</p>
+						</div>
+						<button class="why-choose__btn">explore places</button>
+					</div>
+
+					<div class="why-choose__media">
+						<img
+							src="/images/page2-img1.png"
+							alt="Travel destination 1"
+							class="why-choose__img"
+						/>
+						<img
+							src="/images/page2-img2.png"
+							alt="Travel destination 2"
+							class="why-choose__img"
+						/>
+					</div>
+				</section>
+			</main>
 		</div>
 	</body>
 </html>
